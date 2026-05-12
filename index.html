@@ -55,7 +55,7 @@
           <div class="contact-item">
             <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
             <a href="https://www.linkedin.com/in/horizon-phan-thanh-l%E1%BB%99c-26380a32b/" target="_blank"
-              class="contact-link">linkedin.com/in/horizon-phan-thanh-lộc</a>
+              class="contact-link">linkedin.com/in/horizon-phan-thanh-loc-26380a32b</a>
           </div>
         </div>
       </section>
@@ -188,8 +188,8 @@
           "Schema/MySQL và truy vấn qua JPA/Hibernate tương ứng nghiệp vụ."
         ],
         outcomes: [
-          "Đóng gói được luồng “đăng nhập → tạo post → hiển thị feed → tương tác” end-to-end trên codebase nhóm.",
-          "Tách được concern API vs UI giúp mở rộng REST endpoint mà không vỡ giao diện."
+          "Triển khai hoàn chỉnh 4 nhóm chức năng chính: auth, post CRUD, comment và like trên cùng 1 luồng end-to-end.",
+          "Xây dựng và kết nối ổn định các endpoint REST cốt lõi (auth, post, comment, reaction) giữa React và Spring Boot."
         ],
         githubUrl: "https://github.com/Phuociter/Social_Media",
         demoUrl: ""
@@ -206,8 +206,8 @@
           "Thiết kế DB và truy vấn phục vụ booking/đơn hàng."
         ],
         outcomes: [
-          "Ghép được flow nghiệp vụ ticketing cơ bản (chọn suất → chọn ghế → xác nhận đơn) trong một codepath duy nhất.",
-          "Dễ bảo trì khi chỉnh business rule trong service/controller thay vì rải logic ở view."
+          "Hoàn thiện luồng đặt vé gồm 3 bước nghiệp vụ chính: chọn suất, chọn ghế và xác nhận đơn hàng.",
+          "Tách rõ 2 vai trò hệ thống (Admin/User), giúp quản trị và thao tác đặt vé không chồng chéo quyền."
         ],
         githubUrl: "https://github.com/phucnguyen0704/Cinemax",
         demoUrl: ""
@@ -223,8 +223,8 @@
           "Prototype Figma → Swing; kiểm thử theo checklist nghiệp vụ."
         ],
         outcomes: [
-          "Dùng transaction JDBC cho luồng ghi nhận đơn/hàng tiêu điểm, giảm lỗi dữ liệu khi nhiều form mở cùng lúc.",
-          "Tách báo cáo doanh thu ra lớp truy vấn/SQL để chỉnh KPI mà không phải sửa tay từng màn Swing."
+          "Xây dựng 4 module vận hành chính: thực đơn, đơn hàng, nhân viên và báo cáo doanh thu trong cùng ứng dụng desktop.",
+          "Chuẩn hóa truy vấn JDBC/SQL theo tầng xử lý dữ liệu, giúp giảm lỗi khi cập nhật nghiệp vụ theo từng module."
         ],
         githubUrl: "https://github.com/Phuociter/QuanLyThucAnNhanh",
         demoUrl: ""
@@ -240,8 +240,8 @@
           "Tài liệu kỹ thuật + test thủ công trước nộp."
         ],
         outcomes: [
-          "Chuẩn hóa ERD dùng chung cho nhóm 7 người, tránh xung đột schema khi làm song song nhiều module.",
-          "README + quy ước commit/push giúp thành viên mới vào nhanh hơn khi nối JDBC."
+          "Thiết kế mô hình dữ liệu dùng chung cho nhóm 7 thành viên, giúp đồng bộ module và hạn chế lệch schema.",
+          "Tổ chức quy ước commit + cấu trúc module rõ ràng, hỗ trợ phối hợp code song song trong đồ án nhóm đông."
         ],
         githubUrl: "https://github.com/sonvuuu28/SGU_java_coffee_shop_management",
         demoUrl: ""
@@ -257,8 +257,8 @@
           "Tối ưu typography/spacing và trải nghiệm điện thoại/tablet/desktop."
         ],
         outcomes: [
-          "Nắm vững layout responsive và control flow frontend trước khi vào React.",
-          "Chứng minh khả năng ship UI marketing-grade không cần build tool."
+          "Xây dựng đầy đủ 4 màn hình chính: trang chủ, thực đơn, giỏ hàng và liên hệ với luồng điều hướng nhất quán.",
+          "Triển khai giao diện responsive cho 3 kích thước thiết bị phổ biến: mobile, tablet và desktop."
         ],
         githubUrl: "https://github.com/LocPT1602/WEBTHUCANNHANH",
         demoUrl: ""
@@ -272,7 +272,7 @@
       projects.forEach((project) => {
         const demoBlock = project.demoUrl
           ? `<a href="${project.demoUrl}" target="_blank" rel="noopener" class="demo-link"><i class="fa-solid fa-up-right-from-square"></i> Demo live</a>`
-          : '';
+          : `<span class="demo-pending"><i class="fa-solid fa-clock"></i> Demo: đang deploy</span>`;
 
         const card = document.createElement('div');
         card.className = 'project-card';

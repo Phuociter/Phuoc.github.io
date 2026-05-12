@@ -879,6 +879,19 @@ body {
   color: var(--white);
 }
 
+.demo-pending {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--slate-500);
+  background: var(--slate-100);
+  border: 1.5px dashed var(--slate-300);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 6px;
+}
+
 /* ============================================
    Responsive
    ============================================ */
